@@ -1,5 +1,5 @@
 local M = {
-  filetypes = {
+  filetype = {
     javascript = {
       require('formatter.filetypes.javascript').prettier
     },

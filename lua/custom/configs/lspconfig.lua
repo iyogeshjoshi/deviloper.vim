@@ -21,7 +21,7 @@ lspconfif.tsserver.setup {
     }
   },
   commands = {
-    organizeImports = {
+    OrganizeImports = {
       organize_imports,
       description = 'Organize Imports',
     }
