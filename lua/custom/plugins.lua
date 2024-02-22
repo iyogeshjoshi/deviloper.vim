@@ -1,5 +1,16 @@
 local plugins = {
   {
+    'sourcegraph/sg.nvim',
+    event = 'VeryLazy',
+    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
+
+    -- If you have a recent version of lazy.nvim, you don't need to add this!
+    build = 'nvim -l build/init.lua',
+    config = function()
+      require 'custom.configs.sg'
+    end
+  },
+  {
     'mhartington/formatter.nvim',
     event = 'VeryLazy',
     opts = function()
@@ -42,18 +53,18 @@ local plugins = {
     end
   },
   {
-    "williamboman/mason.nvim",
+    'williamboman/mason.nvim',
     opts = {
       ensure_installed = {
-        "eslint-lsp",
-        "js-debug-adapter",
-        "prettier",
-        "typescript-language-server"
+        'eslint-lsp',
+        'js-debug-adapter',
+        'prettier',
+        'typescript-language-server'
       }
     }
   },
   {
-    "neovim/nvim-lspconfig",
+    'neovim/nvim-lspconfig',
     config = function()
       require 'plugins.configs.lspconfig'
       require 'custom.configs.lspconfig'

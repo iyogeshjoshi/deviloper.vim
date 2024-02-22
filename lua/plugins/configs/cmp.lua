@@ -108,6 +108,7 @@ local options = {
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
+    { name = "cody" },
     { name = "nvim_lua" },
     { name = "path" },
   },
