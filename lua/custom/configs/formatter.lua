@@ -6,6 +6,12 @@ local M = {
     typescript = {
       require('formatter.filetypes.typescript').prettier
     },
+    javascriptreact = {
+      require('formatter.filetypes.javascriptreact').prettier
+    },
+    typescriptreact = {
+      require('formatter.filetypes.typescriptreact').prettier
+    },
     ['*'] = {
       require('formatter.filetypes.any').remove_trailing_whitespace
     }
