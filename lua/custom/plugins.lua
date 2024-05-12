@@ -1,4 +1,22 @@
 local plugins = {
+  { "nvim-neotest/nvim-nio" },
+  {
+    'stevearc/dressing.nvim',
+    opts = function()
+      return require 'custom.configs.dressing'
+    end
+  },
+  --[[ {
+    "Exafunction/codeium.nvim",
+    event = 'BufEnter',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "hrsh7th/nvim-cmp",
+    },
+    config = function()
+      require 'custom.configs.codeium'
+    end
+  }, ]]
   {
     'sourcegraph/sg.nvim',
     event = 'VeryLazy',
