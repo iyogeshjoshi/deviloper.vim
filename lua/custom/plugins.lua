@@ -17,6 +17,7 @@ local plugins = {
       require 'custom.configs.codeium'
     end
   }, ]]
+  -- AI Plugins --
   {
     'sourcegraph/sg.nvim',
     event = 'VeryLazy',
@@ -28,6 +29,17 @@ local plugins = {
       require 'custom.configs.sg'
     end
   },
+  -- enabling Ollama autosuggesion
+  --[[ { 'huggingface/llm-ls' },
+  {
+    'huggingface/llm.nvim',
+    event = 'VeryLazy',
+    dependencies = { 'huggingface/llm-ls' },
+    opts = function()
+      return require 'custom.configs.llm'
+    end
+  }, ]]
+
   {
     'mhartington/formatter.nvim',
     event = 'VeryLazy',
