@@ -18,6 +18,15 @@ local plugins = {
     end
   }, ]]
   {
+    'nvim-neotest/nvim-nio'
+  },
+  {
+    'lewis6991/hover.nvim',
+    config = function()
+      require 'custom.configs.hover'
+    end
+  },
+  {
     'sourcegraph/sg.nvim',
     event = 'VeryLazy',
     dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },

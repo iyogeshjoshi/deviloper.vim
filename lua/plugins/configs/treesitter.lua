@@ -25,6 +25,9 @@ local options = {
   },
 
   indent = { enable = true },
+
+  foldmethod = "expr",
+  foldexpr = "nvim_treesitter#foldexpr()",
 }
 
 return options
