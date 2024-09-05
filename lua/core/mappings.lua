@@ -362,6 +362,12 @@ M.nvterm = {
       end,
       "New vertical term",
     },
+    ["<leader>i"] = {
+      function()
+        require("nvterm.terminal").toggle "float"
+      end,
+      "Toggle floating term",
+    },
   },
 }
 
