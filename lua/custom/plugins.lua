@@ -101,6 +101,22 @@ local plugins = {
       require 'custom.configs.lspconfig'
     end,
   },
+  {
+    'David-Kunz/gen.nvim',
+    event = 'VeryLazy',
+    config = function()
+      require 'custom.configs.gen'
+    end,
+    keys = {
+      {
+        "<leader>sm",
+        function()
+          require("gen").select_model()
+        end,
+        desc = "Select Ollama Model",
+      },
+    },
+  }
 }
 
 return plugins
