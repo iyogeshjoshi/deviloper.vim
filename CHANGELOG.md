@@ -1,3 +1,18 @@
+
+1.0.0 / 2024-09-29
+==================
+
+  * chore: removes additional new term commands, since meta working now
+  * Update README.md
+  * Update FUNDING.yml
+  * feat: adds changelog
+  * feat: adds gen ai plugin
+  * feat: add ollama support
+  * chore: updates nvim plugin
+  * chore: update plugins
+  * chore: update configuration settings and plugins (#1)
+  * feat: adds custom plugins
+  * feat: add neovim initial setup with nvchad
 <!-- markdownlint-disable MD024 -->
 # Changelog
 
