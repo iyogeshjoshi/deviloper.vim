@@ -14,4 +14,14 @@ M.dap = {
   }
 }
 
+M.gen = {
+  plugin = true,
+  n = {
+    ['<A-n>'] = {
+      '<cmd> Gen <CR>',
+      'Gen AI prompt'
+    }
+  }
+}
+
 return M

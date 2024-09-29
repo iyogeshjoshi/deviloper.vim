@@ -75,12 +75,19 @@ local plugins = {
       require 'core.utils'.load_mappings('dap')
     end
   },
+  -- {
+  --   'mfussenegger/nvim-lint',
+  --   event = 'VeryLazy',
+  --   config = function()
+  --     require 'custom.configs.lint'
+  --   end
+  -- },
   {
-    'mfussenegger/nvim-lint',
-    event = 'VeryLazy',
+    "stevearc/conform.nvim",
+    event = 'BufWritePre', -- uncomment for format on save
     config = function()
-      require 'custom.configs.lint'
-    end
+      require 'custom.configs.conform'
+    end,
   },
   {
     'williamboman/mason.nvim',
@@ -106,6 +113,7 @@ local plugins = {
     event = 'VeryLazy',
     config = function()
       require 'custom.configs.gen'
+      require 'core.utils'.load_mappings('gen')
     end,
     keys = {
       {
