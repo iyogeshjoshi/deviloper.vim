@@ -84,12 +84,19 @@ local plugins = {
       require 'core.utils'.load_mappings('dap')
     end
   },
+  -- {
+  --   'mfussenegger/nvim-lint',
+  --   event = 'VeryLazy',
+  --   config = function()
+  --     require 'custom.configs.lint'
+  --   end
+  -- },
   {
-    'mfussenegger/nvim-lint',
-    event = 'VeryLazy',
+    "stevearc/conform.nvim",
+    event = 'BufWritePre', -- uncomment for format on save
     config = function()
-      require 'custom.configs.lint'
-    end
+      require 'custom.configs.conform'
+    end,
   },
   {
     'williamboman/mason.nvim',
@@ -124,9 +131,26 @@ local plugins = {
       --   If not available, we use `mini` as the fallback
       "rcarriga/nvim-notify",
     },
-    config = function ()
+    config = function()
       require 'custom.configs.noice'
     end
+  },
+  {
+    'David-Kunz/gen.nvim',
+    event = 'VeryLazy',
+    config = function()
+      require 'custom.configs.gen'
+      require 'core.utils'.load_mappings('gen')
+    end,
+    keys = {
+      {
+        "<leader>sm",
+        function()
+          require("gen").select_model()
+        end,
+        desc = "Select Ollama Model",
+      },
+    },
   }
 }
 
