@@ -1,0 +1,21 @@
+
+n.n.n / 2024-10-01
+==================
+
+  * Merge branch 'master' of github.com:iyogeshjoshi/deviloper.vim
+  * feat: adds noice plugin for flot cmdline & notification
+  * feat: add conform formatter
+  * chore: update changelog
+  * chore: removes additional new term commands, since meta working now
+  * Update README.md
+  * Update FUNDING.yml
+  * feat: adds changelog
+  * feat: adds gen ai plugin
+  * Merge branch 'master' of github.com:iyogeshjoshi/deviloper.vim
+  * chore: update configs for terminal
+  * feat: add ollama support
+  * chore: updates nvim plugin
+  * chore: update plugins
+  * chore: update configuration settings and plugins (#1)
+  * feat: adds custom plugins
+  * feat: add neovim initial setup with nvchad

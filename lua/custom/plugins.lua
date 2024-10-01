@@ -21,12 +21,12 @@ local plugins = {
   {
     'nvim-neotest/nvim-nio'
   },
-  {
-    'lewis6991/hover.nvim',
-    config = function()
-      require 'custom.configs.hover'
-    end
-  },
+  -- {
+  --   'lewis6991/hover.nvim',
+  --   config = function()
+  --     require 'custom.configs.hover'
+  --   end
+  -- },
   {
     'sourcegraph/sg.nvim',
     event = 'VeryLazy',
