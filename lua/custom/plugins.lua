@@ -1,5 +1,4 @@
 local plugins = {
-  { "nvim-neotest/nvim-nio" },
   {
     'stevearc/dressing.nvim',
     opts = function()
@@ -27,7 +26,7 @@ local plugins = {
   --     require 'custom.configs.hover'
   --   end
   -- },
-  {
+  --[[{
     'sourcegraph/sg.nvim',
     event = 'VeryLazy',
     dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
@@ -37,7 +36,7 @@ local plugins = {
     config = function()
       require 'custom.configs.sg'
     end
-  },
+  },]]
   -- enabling Ollama autosuggesion
   --[[ { 'huggingface/llm-ls' },
   {
@@ -48,6 +47,11 @@ local plugins = {
       return require 'custom.configs.llm'
     end
   }, ]]
+  -- enabling github copilot
+  {
+    'github/copilot.vim',
+    event = 'VeryLazy'
+  },
 
   {
     'mhartington/formatter.nvim',
@@ -56,6 +60,7 @@ local plugins = {
       return require 'custom.configs.formatter'
     end
   },
+
   {
     'rcarriga/nvim-dap-ui',
     event = 'VeryLazy',
@@ -91,6 +96,7 @@ local plugins = {
   --     require 'custom.configs.lint'
   --   end
   -- },
+  -- LSP formatter
   {
     "stevearc/conform.nvim",
     event = 'BufWritePre', -- uncomment for format on save
@@ -135,23 +141,6 @@ local plugins = {
       require 'custom.configs.noice'
     end
   },
-  {
-    'David-Kunz/gen.nvim',
-    event = 'VeryLazy',
-    config = function()
-      require 'custom.configs.gen'
-      require 'core.utils'.load_mappings('gen')
-    end,
-    keys = {
-      {
-        "<leader>sm",
-        function()
-          require("gen").select_model()
-        end,
-        desc = "Select Ollama Model",
-      },
-    },
-  }
 }
 
 return plugins
