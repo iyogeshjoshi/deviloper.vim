@@ -5,17 +5,6 @@ local plugins = {
       return require 'custom.configs.dressing'
     end
   },
-  --[[ {
-    "Exafunction/codeium.nvim",
-    event = 'BufEnter',
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    config = function()
-      require 'custom.configs.codeium'
-    end
-  }, ]]
   -- AI Plugins --
   {
     'nvim-neotest/nvim-nio'
@@ -26,27 +15,6 @@ local plugins = {
   --     require 'custom.configs.hover'
   --   end
   -- },
-  --[[{
-    'sourcegraph/sg.nvim',
-    event = 'VeryLazy',
-    dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope.nvim' },
-
-    -- If you have a recent version of lazy.nvim, you don't need to add this!
-    build = 'nvim -l build/init.lua',
-    config = function()
-      require 'custom.configs.sg'
-    end
-  },]]
-  -- enabling Ollama autosuggesion
-  --[[ { 'huggingface/llm-ls' },
-  {
-    'huggingface/llm.nvim',
-    event = 'VeryLazy',
-    dependencies = { 'huggingface/llm-ls' },
-    opts = function()
-      return require 'custom.configs.llm'
-    end
-  }, ]]
   -- enabling github copilot
   {
     'github/copilot.vim',
